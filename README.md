@@ -33,5 +33,5 @@ docker compose -f docker-compose.tests.yml up --build
 ```
 # Warning!
 ![Image](https://github.com/VasyaIT/test_task_for_smit/blob/main/image.png)  
-Since Tortoise cannot delete all tables, does not delete the entire database, the last rows are commented out, since Docker cannot delete the current database  
-If you are going to run tests outside of Docker, then uncomment these lines
+Since Tortoise can't delete all tables, but deletes the entire database, the last lines are commented out because Docker can't delete the current database
+If you are going to run tests outside of Docker then uncomment these lines
