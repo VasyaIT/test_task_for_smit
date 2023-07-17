@@ -1,0 +1,15 @@
+services:
+  web:
+    build: .
+    command: >
+      sh -c 'pytest tests/ -v'
+    env_file:
+      - .env.test
+    depends_on:
+      - db_test
+
+  db_test:
+    image: postgres:14.5-alpine
+    restart: always
+    env_file:
+      - .env.test
